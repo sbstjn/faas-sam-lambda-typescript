@@ -1,0 +1,37 @@
+{
+  "name": "faas-sam-lambda-typescript",
+  "private": true,
+  "version": "0.0.0-development",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "yarn lint:base -l",
+    "lint:prettier": "prettier --config .prettierrc",
+    "lint:tslint": "tslint -c ./tslint.json",
+    "lint:base": "yarn lint:tslint \"src/**/*.{ts,tsx}\" && yarn lint:prettier \"./src/**/*.{ts,tsx,json}\"",
+    "lint:fix": "yarn lint:base --write",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.15",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.11",
+    "aws-lambda": "^0.1.2",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.3",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.17.0",
+    "typescript": "^3.2.1"
+  },
+  "jest": {
+    "transform": {
+      ".*": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ]
+  }
+}

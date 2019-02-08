@@ -1,0 +1,11 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "rules": {
+    "interface-name": [true, "never-prefix"],
+    "no-console": [false]
+  },
+  "linterOptions": {
+    "exclude": ["node_modules/**/*.ts"],
+    "include": ["src/**/*.ts", "tests/**/*.ts"]
+  }
+}
